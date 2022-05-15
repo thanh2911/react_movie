@@ -1,0 +1,62 @@
+
+@media (min-width:1025px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media (max-width:1024px) and (min-width:701px) {
+    html {
+        font-size: 80%;
+    }
+
+}
+
+@media (max-width:700px) {
+    html {
+        font-size: 60%;
+    }
+    
+    body {
+        margin-bottom: 48px;
+    }
+
+    /* Header  */
+    .header.shirnk {
+        height: 60px !important;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .logo > img {
+        width: 30px !important;
+    }
+
+    .header__wrap {
+        justify-content: center !important ;
+    }   
+
+    .nav {
+        position: fixed !important;
+        bottom: 0;
+        left: 0;
+        height: 5rem;
+        width: 100%;
+        background-color: var(--body-bg);
+        padding: 0 2rem;
+        box-shadow: var(--box-shadow);
+        z-index: 10;
+
+        display: flex !important;
+        align-items: center;
+        justify-content:space-around;
+
+    }
+
+    /* End header */
+
+
+}
+

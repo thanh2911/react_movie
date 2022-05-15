@@ -1,0 +1,43 @@
+.footer {
+    margin-top: 100px;
+    position: relative;
+    padding: 6rem 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__content-logo a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.footer__content-logo * ~ * {
+    margin-left: 20px;
+}
+
+
+.footer__content-menus {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer__content-menu {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}

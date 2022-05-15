@@ -1,0 +1,32 @@
+.movie-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill , minmax(200px,1fr));
+    gap: 20px;
+    margin-bottom: 3rem;
+}
+
+.movie-grid__loadmore {
+    text-align: center;
+}
+
+.movie-search > * ~ * {
+    margin-left: 10px;
+}
+
+.movie-search {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.movie-search > input {
+    width: 100%;
+    padding-right: 8rem;
+}
+
+.movie-search > button {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    padding: 0.38rem 1.5rem !important;
+}

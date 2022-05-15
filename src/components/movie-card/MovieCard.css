@@ -1,0 +1,43 @@
+.movie-card {
+    position: relative;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 140%;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.movie-card > .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0);
+    transition: transform .3s ease , box-shadow .3s ease ;
+}
+
+.movie-card > .btn > i {
+    font-size: 2rem;
+}
+
+.movie-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    border-radius: var(--border-radius);
+    background-color: var(--black-color);
+    transition: opacity .3s ease;
+}
+
+.movie-card:hover::before {
+    opacity: 0.6;
+}
+
+.movie-card:hover .btn {
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}

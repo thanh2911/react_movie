@@ -1,0 +1,72 @@
+.header {
+    height: var(--height-header);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transition: height .3s ease , background-color .3s ease;
+    
+    z-index: 10;
+}
+
+.header.shirnk {
+    height: var(--height-header-shrink);
+    background-color: var(--body-bg);
+    box-shadow: var(--box-shadow);
+}
+
+.header__wrap  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.logo > img {
+    margin-right: 10px;
+    width: 50px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav > li ~ li {
+    margin-left: 2rem;
+}
+
+.nav > li {
+    padding: 5px 0; 
+    font-weight: 700;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.nav > li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;/* thay vi tao hieu ung chay tu tri qua */
+    transform: translateX(-50%); /* o day t chay hieu ung tu giua qua 2 ben */
+    width: 0;
+    height: 2px;
+    transition: width 0.5s ease;
+    background-color: var(--main-color);
+}
+
+.nav > li.active::after ,
+.nav > li:hover::after {
+    width: 100%;
+}

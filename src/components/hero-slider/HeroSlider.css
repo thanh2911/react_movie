@@ -1,0 +1,120 @@
+.hero-slider {
+    margin-bottom: 3rem;
+    
+}
+
+.hero-slider__item {
+    padding: 9rem 0;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.hero-slider__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hero-slider__item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to top , var(--body-bg,rgba(var(--black-color),0)));
+}
+
+.hero-slider__item-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-slider__item-content--info {
+    width: 50%;
+    padding: 0 3rem ;
+    position: relative;
+    margin-top: 100px;
+}
+
+.hero-slider__item-content--info > .title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.hero-slider__item-content--info > .overview {
+    font-weight: 700;
+    margin: 50px 0;
+}
+
+.hero-slider__item-content--info > .btns , 
+.hero-slider__item-content--info > .overview , 
+.hero-slider__item-content--info > .title {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: transform .5s ease , opacity .5s ease;
+}
+
+.hero-slider__item-content--poster{
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slider__item-content--poster > img {
+    width: 300px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+
+    transform: scale(0);
+    transition: transform .7s ease ;
+}
+
+.hero-slider__item.active >
+.hero-slider__item-content >
+.hero-slider__item-content--poster > img {
+    transform: scale(1);
+}
+
+.hero-slider__item.active > 
+.hero-slider__item-content >
+.hero-slider__item-content--info >.btns ,
+.hero-slider__item.active > 
+.hero-slider__item-content >
+.hero-slider__item-content--info > .overview,
+.hero-slider__item.active > 
+.hero-slider__item-content >
+.hero-slider__item-content--info > .title
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title {
+    transition-delay: .3s;
+}
+.overview {
+    transition-delay: .6s;
+}
+.btns {
+    transition-delay: .9s;
+}
+
+.btn ~ .btn{
+    margin-left: 20px;
+}
+
+
