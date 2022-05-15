@@ -103,13 +103,13 @@
     transform: translateY(0);
 }
 
-.title {
+.hero-slider__item-content--info > .title {
     transition-delay: .3s;
 }
-.overview {
+.hero-slider__item-content--info > .overview {
     transition-delay: .6s;
 }
-.btns {
+.hero-slider__item-content--info > .btns {
     transition-delay: .9s;
 }
 
